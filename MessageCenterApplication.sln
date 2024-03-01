@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{69EDD940-7AE8-43A5-B326-01703139F70B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{3E378A03-7F3E-4BA9-B4FA-6BDFBDF2CA0A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageCenter.Api", "src\MessageCenter.Api\MessageCenter.Api.csproj", "{F3C47060-3F02-43D1-BB19-3910F9388D64}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F3C47060-3F02-43D1-BB19-3910F9388D64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3C47060-3F02-43D1-BB19-3910F9388D64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3C47060-3F02-43D1-BB19-3910F9388D64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3C47060-3F02-43D1-BB19-3910F9388D64}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F3C47060-3F02-43D1-BB19-3910F9388D64} = {69EDD940-7AE8-43A5-B326-01703139F70B}
+	EndGlobalSection
+EndGlobal
