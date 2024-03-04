@@ -1,9 +1,21 @@
+using MessageCenter.Core.Interfaces;
+using MessageCenter.Core.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+//add controllers
+builder.Services.AddControllers();
+
+// add service
+builder.Services.AddSingleton<IMessageService, EmailService>();
+builder.Services.AddSingleton<IMessageService, SmsService>();
+builder.Services.AddSingleton<IMessageService, MqttService>();
+builder.Services.AddSingleton<MessageCenter.Core.MessageCenter>();
 
 var app = builder.Build();
 
@@ -35,6 +47,8 @@ app.MapGet("/weatherforecast", () =>
     })
     .WithName("GetWeatherForecast")
     .WithOpenApi();
+
+app.MapControllers();
 
 app.Run();
 

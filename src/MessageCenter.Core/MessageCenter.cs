@@ -15,7 +15,7 @@ public class MessageCenter(IServiceProvider serviceProvider)
         {
             throw new InvalidOperationException($"No message service found for type {payload.Type}");
         }
-        
+
         await service.SendMessageAsync(payload);
     }
 }
