@@ -1,6 +1,8 @@
-﻿namespace MessageCenter.Core.Interfaces;
+﻿using MessageCenter.Core.Models;
+
+namespace MessageCenter.Core.Interfaces;
 
 public interface IMessageService
 {
-    Task SendMessageAsync(string recipient, string message);
+    Task SendMessageAsync(MessagePayload payload);
 }
