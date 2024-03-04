@@ -4,10 +4,10 @@ using Microsoft.AspNetCore.Mvc;
 namespace MessageCenter.Api.Controllers;
 
 [ApiController]
-[Route("api/[controller]")]
+[Route("[controller]")]
 public class MessagesController(Core.MessageCenter messageCenter) : ControllerBase
 {
-    [HttpPost]
+    [HttpPost(Name = "SendMessage")]
     public async Task<IActionResult> SendMessage([FromBody] MessagePayload payload)
     {
         try
@@ -19,5 +19,11 @@ public class MessagesController(Core.MessageCenter messageCenter) : ControllerBa
         {
             return BadRequest(ex.Message);
         }
+    }
+
+    [HttpGet(Name = "GetMessageHistory")]
+    public async Task<IActionResult> GetMessageHistory()
+    {
+        return Ok();
     }
 }
